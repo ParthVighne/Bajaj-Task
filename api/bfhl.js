@@ -30,7 +30,6 @@ const validateFile = (base64String) => {
   }
 };
 
-// POST /api/bfhl
 app.post("/bfhl", (req, res) => {
   const { data, file_b64 } = req.body || {};
 
@@ -76,9 +75,8 @@ app.post("/bfhl", (req, res) => {
   res.json(response);
 });
 
-// GET /api/bfhl
 app.get("/bfhl", (req, res) => {
   res.json({ operation_code: 1 });
 });
 
-module.exports = app; // Export as a module for serverless functions
+module.exports = app;
